@@ -9,8 +9,8 @@ public class BookManager {
         this.list = new ArrayList<>();
     }
     
-    public void addBook(String title, String image, String review) {
-        Book book = new Book(title, image, review);
+    public void addBook(String title, String author, String isbn, String review) {
+        Book book = new Book(title, author, isbn, review);
         list.add(book);
         while (list.size() > 10) {
             list.remove(0);

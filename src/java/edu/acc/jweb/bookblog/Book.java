@@ -6,13 +6,15 @@ import java.util.Date;
 
 public class Book {
     public String title;
-    public String image;
+    public String author;
+    public String isbn;
     public String review;
     public Date date;
     
-    public Book (String title, String image, String review) {
+    public Book (String title, String author, String isbn, String review) {
         this.title = title;
-        this.image = image;
+        this.author = author;
+        this.isbn = isbn;
         this.review = review;
         this.date = new Date();
     }
@@ -21,8 +23,12 @@ public class Book {
         return this.title;
     }
     
-    public String getImage() {
-        return this.image;
+    public String getAuthor() {
+        return this.author;
+    }
+    
+    public String getISBN() {
+        return this.isbn;
     }
     
     public String getReview() {

@@ -11,9 +11,13 @@ public class BookBlogListener implements ServletContextListener {
     @Override
     public void contextInitialized(ServletContextEvent sce) {
         BookManager bookManager = new BookManager();
-        bookManager.addBook("The Hobbit", "/BookBlog/images/thehobbit.jpg", "What can you say about a classic? Great book. Everyone should read it.");
+        bookManager.addBook("The Hobbit", "J.R.R. Tolkien", "978-0618968633", "What can you say about a classic? Great book. Everyone should read it.");
         ServletContext sc = sce.getServletContext();
         sc.setAttribute("bookManager", bookManager);
+        
+        UserManager userManager = new UserManager();
+        userManager.addUser("admin", "password");
+        sc.setAttribute("userManager", userManager);
     }
 
     @Override
