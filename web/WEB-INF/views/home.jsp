@@ -26,7 +26,7 @@
             </c:when>
             <c:otherwise>
                 <br><div class="d"><a href="/BookBlog/logout">Logout</a></div><br>
-                <br><div class="d"><a href="/BookBlog/login">Add Book</a></div><br>
+                <br><div class="d"><a href="/BookBlog/addbook">Add Book</a></div><br>
             </c:otherwise>
         </c:choose>
     </body>
