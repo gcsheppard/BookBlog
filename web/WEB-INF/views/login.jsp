@@ -8,6 +8,7 @@
     </head>
     <body>
         <h1><c:out value = "${flash}"/></h1>
+        
         <h2>Login:</h2>
         <form action="login" method="post">
             <div class="b"><input type="text" name="username" placeholder="Username"}></div><br>

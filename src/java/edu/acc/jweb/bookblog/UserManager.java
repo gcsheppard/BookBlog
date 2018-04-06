@@ -14,13 +14,15 @@ public class UserManager {
         this.list.add(user);
     }
     
-    public User validateUser(User user) {
-        User found = findUser(user.username);
-        if (found==null) {
-            return null;
-        }
-        if (found.password.equals(user.password)) {
-            return found;
+    public User validateUser(String username, String password) {
+        User found = findUser(username);
+        if (found != null) {
+            if (found.getPassword().equals(PasswordHash.hashPassword(password))) {
+                return found;
+            }
+            else {
+                return null;
+            }
         }
         else {
             return null;
@@ -29,7 +31,7 @@ public class UserManager {
     
     public User findUser(String username) {
         for (int i=0; i<list.size(); i++) {
-            if (list.get(i).username.equals(username)) {
+            if (list.get(i).getUsername().equals(username)) {
                 return list.get(i);
             }
         }
