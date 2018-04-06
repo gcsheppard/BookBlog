@@ -1,6 +1,7 @@
 package edu.acc.jweb.bookblog;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -32,7 +33,10 @@ public class LoginServlet extends HttpServlet {
             session.setAttribute("user", user);
             flash = "";
             request.setAttribute("flash", flash);
-            getServletContext().getRequestDispatcher("/WEB-INF/views/home.jsp").forward(request, response);   
+            BookManager bookManager = (BookManager) getServletContext().getAttribute("bookManager");
+            ArrayList<Book> books = bookManager.getBooks();
+            request.setAttribute("books", books);
+            response.sendRedirect("/BookBlog/home");
         }
         else {
             flash = "Login failed.";

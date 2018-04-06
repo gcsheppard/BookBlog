@@ -11,7 +11,7 @@
         <h2>Login:</h2>
         <form action="login" method="post">
             <div class="b">Username: <input type="text" name="username"}></div><br>
-            <div class="b">Password: <input type="text" name="password"></div><br>
+            <div class="b">Password: <input type="password" name="password"></div><br>
             <div class="c"><input type="submit" value="Submit" /><br>
         </form>  
     </body>

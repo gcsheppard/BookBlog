@@ -19,10 +19,4 @@ public class BookBlogServlet extends HttpServlet {
         request.setAttribute("books", books);
         getServletContext().getRequestDispatcher("/WEB-INF/views/home.jsp").forward(request, response);
     }
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-    }
-    
 }

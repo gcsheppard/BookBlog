@@ -19,6 +19,15 @@
                 </li>
             </c:forEach>
         </ul>
+            <br>
+        <c:choose>
+            <c:when test = "${user == null}">
                 <br><div class="d"><a href="/BookBlog/login">Login</a></div><br>
+            </c:when>
+            <c:otherwise>
+                <br><div class="d"><a href="/BookBlog/logout">Logout</a></div><br>
+                <br><div class="d"><a href="/BookBlog/login">Add Book</a></div><br>
+            </c:otherwise>
+        </c:choose>
     </body>
 </html>
