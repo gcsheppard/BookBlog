@@ -30,9 +30,9 @@ public class UserManager {
     }
     
     public User findUser(String username) {
-        for (int i=0; i<list.size(); i++) {
-            if (list.get(i).getUsername().equals(username)) {
-                return list.get(i);
+        for(User user : list) {
+            if (user.getUsername().equals(username)) {
+                return user;
             }
         }
         return null;

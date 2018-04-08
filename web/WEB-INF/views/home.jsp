@@ -10,13 +10,13 @@
         <ul>
             <c:forEach var="book" items="${books}">
                 <li>
-                    
-                    <div class ="f">Title: <c:out value = "${book.title}"/></div>
-                    <div class ="f">Author: <c:out value = "${book.author}"/></div>
-                    <div class ="f">ISBN: <c:out value = "${book.ISBN}"/></div>
-                    <div class="a">Review: <c:out value = "${book.review}"/></div>
-                    <br>
+                    <div class ="f">Title: <c:out value = "${book.title}"/><br>
+                    Author: <c:out value = "${book.author}"/><br>
+                    ISBN: <c:out value = "${book.ISBN}"/><br>
+                    Review: </div>
+                    <div class="g"><c:out value = "${book.review}"/></div>
                 </li>
+                <hr>
             </c:forEach>
         </ul>
             <br>
